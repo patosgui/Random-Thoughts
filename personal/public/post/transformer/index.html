@@ -13,7 +13,7 @@ Transformers | Hugo Nightfall
 <meta name="generator" content="Hugo 0.125.4">
 
 
-<link rel="canonical" href="http://localhost:1313/post/transformer/" >
+<link rel="canonical" href="http://pedrolopes.ddns.net:1313/post/transformer/" >
 
 
 
@@ -31,7 +31,7 @@ Transformers | Hugo Nightfall
         <header class="headerWrapper">
     <div class="header">
         <div>
-            <a class="terminal" href="http://localhost:1313/">
+            <a class="terminal" href="http://pedrolopes.ddns.net:1313/">
                 <span>hello@gohugo.io ~ $</span>
             </a>
         </div>
@@ -41,12 +41,12 @@ Transformers | Hugo Nightfall
             <ul>
                 
                 <li>
-                    <a href="http://localhost:1313/about" title="" >
+                    <a href="http://pedrolopes.ddns.net:1313/about" title="" >
                         ~/about</a>
                 </li>
                 
                 <li>
-                    <a href="http://localhost:1313/blog" title="" >
+                    <a href="http://pedrolopes.ddns.net:1313/blog" title="" >
                         ~/blog</a>
                 </li>
                 
@@ -101,7 +101,16 @@ Transformers | Hugo Nightfall
 <p>The transformer architecture allows to perform tasks on inputs of variable length. This provides a
 solution to the scalability of fully connected neural networks where processing hundreds or thousands of words
 becomes unfeasable.</p>
-<h1 id="h1">H1</h1>
+<h1 id="compute-complexity">Compute complexity</h1>
+<p>The complexity of the attention layer of the transformer scales linearly with the sequence length. This is
+true for the Queries and Values matrices. However the number of attention weights has a quadratic dependence on
+the sequence length, but it is independent of the length D of each input [book]</p>
+<h1 id="scaled-dot-prodcut-self-attention">Scaled dot-prodcut self-attention</h1>
+<p>The dot products in the attention computation can have large magnitudes and move
+the arguments to the softmax function into a region where the largest value completely
+dominates. Small changes to the inputs to the softmax function now have little effect on Problem 12.4 the output (i.e., the gradients are very small), making the model difficult to train. To
+prevent this, the dot products are scaled by the square root of the dimension Dq of the
+queries and keys (i.e., the number of rows in Ωq and Ωk, which must be the same): [book]</p>
 <h2 id="h2">H2</h2>
 <h3 id="h3">H3</h3>
 <h4 id="h4">H4</h4>
