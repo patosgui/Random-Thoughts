@@ -2,27 +2,32 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on </title>
-    <link>http://pedrolopes.ddns.net:1313/categories/</link>
+    <link>http://pedrolopes.ddns.net/categories/</link>
     <description>Recent content in Categories on </description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <managingEditor>email@example.com (Hugo Nightfall)</managingEditor>
-    <webMaster>email@example.com (Hugo Nightfall)</webMaster>
-    <lastBuildDate>Mon, 29 Apr 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://pedrolopes.ddns.net:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 29 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://pedrolopes.ddns.net/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Syntax</title>
-      <link>http://pedrolopes.ddns.net:1313/categories/syntax/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>email@example.com (Hugo Nightfall)</author>
-      <guid>http://pedrolopes.ddns.net:1313/categories/syntax/</guid>
+      <link>http://pedrolopes.ddns.net/categories/syntax/</link>
+      <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://pedrolopes.ddns.net/categories/syntax/</guid>
+      
       <description></description>
+      
     </item>
+    
     <item>
       <title>Themes</title>
-      <link>http://pedrolopes.ddns.net:1313/categories/themes/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><author>email@example.com (Hugo Nightfall)</author>
-      <guid>http://pedrolopes.ddns.net:1313/categories/themes/</guid>
+      <link>http://pedrolopes.ddns.net/categories/themes/</link>
+      <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
+      
+      <guid>http://pedrolopes.ddns.net/categories/themes/</guid>
+      
       <description></description>
+      
     </item>
+    
   </channel>
 </rss>

@@ -1,68 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xhtml="http://www.w3.org/1999/xhtml">
-  <url>
-    <loc>http://pedrolopes.ddns.net:1313/</loc>
-    <lastmod>2024-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/categories/</loc>
-    <lastmod>2024-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/tags/css/</loc>
-    <lastmod>2024-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/tags/html/</loc>
-    <lastmod>2024-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/tags/index/</loc>
-    <lastmod>2024-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/tags/markdown/</loc>
-    <lastmod>2024-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/post/</loc>
-    <lastmod>2024-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/categories/syntax/</loc>
-    <lastmod>2024-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/tags/</loc>
-    <lastmod>2024-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/categories/themes/</loc>
-    <lastmod>2024-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/post/transformer/</loc>
-    <lastmod>2024-04-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/post/markdown-syntax/</loc>
-    <lastmod>2019-03-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/tags/privacy/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/post/rich-content/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/tags/shortcodes/</loc>
-    <lastmod>2019-03-10T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/post/placeholder-text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/tags/text/</loc>
-    <lastmod>2019-03-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/post/math-typesetting/</loc>
-    <lastmod>2019-03-08T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/tags/emoji/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/post/emoji-support/</loc>
-    <lastmod>2019-03-05T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://pedrolopes.ddns.net:1313/about/</loc>
-    <lastmod>2019-02-28T00:00:00+00:00</lastmod>
-  </url>
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <sitemap>
+    <loc>http://pedrolopes.ddns.net/en-gb/sitemap.xml</loc>
+    
+      <lastmod>2024-04-29T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://pedrolopes.ddns.net/de-de/sitemap.xml</loc>
+    
+      <lastmod>2024-03-04T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://pedrolopes.ddns.net/ru-ru/sitemap.xml</loc>
+    
+      <lastmod>2023-05-02T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+  <sitemap>
+    <loc>http://pedrolopes.ddns.net/it/sitemap.xml</loc>
+    
+      <lastmod>2023-05-02T00:00:00+00:00</lastmod>
+    
+  </sitemap>
+  
+</sitemapindex>
