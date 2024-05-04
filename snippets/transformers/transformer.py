@@ -12,6 +12,12 @@ N = 3
 
 np.random.seed(0)
 
+def mse(inputs, results):
+    # Calculate the mean of the squared differences
+    squared_diff = np.square(inputs - results).sum(1)
+    return squared_diff.mean()
+
+
 def print_with_name(*args):
     for arg in args:
         print(f"""
@@ -78,7 +84,6 @@ def self_attention(num, dim, inputs):
     weights_k, bias_k = generate_network(dim)
     weights_v, bias_v = generate_network(dim)
 
-
     # Calculate attentions
     queries = inputs @ weights_q + bias_q # [3x4]
     keys = inputs @ weights_k + bias_k # [3x4]
@@ -106,6 +111,41 @@ def self_attention(num, dim, inputs):
 
     return outputs
 
+inputs = np.random.normal(size=(1,D))
+weights_test, bias_test = generate_network(4)
+
+# train loop
+# Based on https://nasheqlbrm.github.io/blog/posts/2021-11-13-backward-pass.html#notation
+for epoch in range(1000):
+    # Forward pass
+    result = inputs @ weights_test + bias_test
+    # Backward pass
+    dL_dO = 2/N * (inputs - result)
+    ## Single layer Jacobian
+    dL_dW = inputs.T @ dL_dO
+    dL_db = dL_dO.sum(0)
+    # Update
+    weights_test += 0.001 * dL_dW
+    bias_test += 0.001 * dL_db
+
+    outputs = inputs @ weights_test + bias_test
+    print(f"Iteration {epoch} - MSE: {mse(inputs, outputs)}")
+
+
+print(inputs)
+outputs = inputs @ weights_test + bias_test
+print(outputs)
+
+exit(1)
+result = inputs @ weights_test + bias_test
+dL_dO = 2/N * (inputs - result)
+dL_dW = inputs.T @ dL_dO
+print(dL_dW)
+exit(1)
+dL_db = dL_dO.sum(0)
+print(dJ_dO)
+
+exit(1)
 
 tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
 
@@ -120,8 +160,6 @@ encoding = getPositionEncoding(seq_len=seq_len, d=D)
 with torch.no_grad():
     inputs = embeddings(torch.tensor(input_token_ids)) + encoding
 
-D = 8
-
 print("## Input Handling ##")
 print_with_name(
     ("Input Tokens", input_tokens),
@@ -135,8 +173,8 @@ print_with_name(
 print("## Transformer ##")
 print("### Multi Head Attention ###")
 
-self_attention_1 = self_attention(num=seq_len, dim=D//2, inputs=inputs)
-self_attention_2 = self_attention(num=seq_len, dim=D//2, inputs=inputs)
+self_attention_1 = self_attention(num=seq_len, dim=D//2, inputs=inputs[:,:D//2])
+self_attention_2 = self_attention(num=seq_len, dim=D//2, inputs=inputs[:,D//2:])
 
 # TODO: How to concatenate multi heads? Is therea any multiplication required?
 result = np.concatenate((self_attention_1, self_attention_2), axis=1)
@@ -177,6 +215,21 @@ print_with_name(
     ("Layer Norm", result),
 )
 
+
+print("debug")
+print(inputs)
+print(result)
+
+# Calculate the mean of the squared differences
+squared_diff = np.square(inputs - result).sum(1)
+mse = squared_diff.mean()
+
+J_activation = 1/seq_len * (inputs - result)
+
+print(J_activation)
+exit(1)
+
+print("Mean Squared Error (MSE):", mse)
 
 # Backpropagation https://nasheqlbrm.github.io/blog/posts/2021-11-13-backward-pass.html
 # TODO: Residual connection
