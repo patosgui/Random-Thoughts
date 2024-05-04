@@ -114,6 +114,10 @@ def self_attention(num, dim, inputs):
 inputs = np.random.normal(size=(1,D))
 weights_test, bias_test = generate_network(4)
 
+
+weights_test = np.random.normal(size=(4,4))
+bias_test = np.random.normal(size=(4,))
+
 # train loop
 # Based on https://nasheqlbrm.github.io/blog/posts/2021-11-13-backward-pass.html#notation
 for epoch in range(1000):
