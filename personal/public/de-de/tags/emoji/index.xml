@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Emoji on </title>
-    <link>http://pedrolopes.ddns.net/de-de/tags/emoji/</link>
+    <link>http://patosga.net/de-de/tags/emoji/</link>
     <description>Recent content in Emoji on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>de-de</language>
-    <lastBuildDate>Wed, 01 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://pedrolopes.ddns.net/de-de/tags/emoji/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 01 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://patosga.net/de-de/tags/emoji/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Emoji Support</title>
-      <link>http://pedrolopes.ddns.net/de-de/posts/emoji-support/</link>
+      <link>http://patosga.net/de-de/posts/emoji-support/</link>
       <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
       
-      <guid>http://pedrolopes.ddns.net/de-de/posts/emoji-support/</guid>
+      <guid>http://patosga.net/de-de/posts/emoji-support/</guid>
       
       <description>&lt;p&gt;Emoji can be enabled in a Hugo project in a number of ways.&lt;/p&gt;</description>
       

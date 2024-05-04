@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 
 import numpy as np
+import torch
+from torch.nn import Embedding
+from transformers import AutoTokenizer
 
 # Number of dimensions of each input
 D = 4
@@ -8,6 +11,18 @@ D = 4
 N = 3
 
 np.random.seed(0)
+
+# from https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/
+def getPositionEncoding(seq_len, d, n=10000):
+    P = np.zeros((seq_len, d))
+    for k in range(seq_len):
+        for i in np.arange(int(d/2)):
+            denominator = np.power(n, 2*i/d)
+            P[k, 2*i] = np.sin(k/denominator)
+            P[k, 2*i+1] = np.cos(k/denominator)
+    return P
+ 
+P = getPositionEncoding(seq_len=4, d=4, n=100)
 
 def softmax(x):
     """
@@ -93,15 +108,29 @@ Outputs:
 
     return outputs
 
-inputs = np.random.normal(size=(N,D))
+
+tokenizer = AutoTokenizer.from_pretrained("bert-base-uncased")
+
+inputs = "You can now install TorchText using pip!"
+input_tokens = tokenizer.tokenize(inputs)
+input_token_ids = tokenizer.convert_tokens_to_ids(input_tokens)
+seq_len = len(input_token_ids)
+
+embeddings = Embedding(num_embeddings=tokenizer.vocab_size, embedding_dim=D)
+encoding = getPositionEncoding(seq_len=seq_len, d=D)
+
+with torch.no_grad():
+    input = embeddings(torch.tensor(input_token_ids)) + encoding
+#inputs = np.random.normal(size=(N,D))
+
 print(
 f"""
-Inputs 
+Inputs with Position Encoding
 {inputs}
 """)
 
-self_attention_1 = self_attention(num=N, dim=D//2, inputs=inputs)
-self_attention_2 = self_attention(num=N, dim=D//2, inputs=inputs)
+self_attention_1 = self_attention(num=seq_len, dim=D//2, inputs=inputs)
+self_attention_2 = self_attention(num=seq_len, dim=D//2, inputs=inputs)
 
 # TODO: How to concatenate multi heads? Is therea any multiplication required?
 result = np.concatenate((self_attention_1, self_attention_2), axis=1)
@@ -124,7 +153,7 @@ Layer Norm
 )
 
 # Generate as many networks as inputs
-parallel_nns = [generate_network(dim=D) for _ in range(N)]
+parallel_nns = [generate_network(dim=D) for _ in range(seq_len)]
 
 for input, nn in zip(result, parallel_nns):
     print("üüü")

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Syntax on </title>
-    <link>http://pedrolopes.ddns.net/categories/syntax/</link>
+    <link>http://patosga.net/categories/syntax/</link>
     <description>Recent content in Syntax on </description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 29 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://pedrolopes.ddns.net/categories/syntax/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 29 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://patosga.net/categories/syntax/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Transformers</title>
-      <link>http://pedrolopes.ddns.net/posts/transformer/</link>
+      <link>http://patosga.net/posts/transformer/</link>
       <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
       
-      <guid>http://pedrolopes.ddns.net/posts/transformer/</guid>
+      <guid>http://patosga.net/posts/transformer/</guid>
       
       <description>&lt;p&gt;This is the first article in a series of articles about implementing a transformer from scratch.&lt;/p&gt;</description>
       
