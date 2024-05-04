@@ -15,18 +15,4 @@
     
   </sitemap>
   
-  <sitemap>
-    <loc>http://patosga.net/ru-ru/sitemap.xml</loc>
-    
-      <lastmod>2023-05-02T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
-  <sitemap>
-    <loc>http://patosga.net/it/sitemap.xml</loc>
-    
-      <lastmod>2023-05-02T00:00:00+00:00</lastmod>
-    
-  </sitemap>
-  
 </sitemapindex>

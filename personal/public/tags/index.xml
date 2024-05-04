@@ -5,51 +5,6 @@
     <link>http://patosga.net/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-gb</language>
-    <lastBuildDate>Mon, 29 Apr 2024 00:00:00 +0000</lastBuildDate><atom:link href="http://patosga.net/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Css</title>
-      <link>http://patosga.net/tags/css/</link>
-      <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
-      
-      <guid>http://patosga.net/tags/css/</guid>
-      
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Html</title>
-      <link>http://patosga.net/tags/html/</link>
-      <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
-      
-      <guid>http://patosga.net/tags/html/</guid>
-      
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Markdown</title>
-      <link>http://patosga.net/tags/markdown/</link>
-      <pubDate>Mon, 29 Apr 2024 00:00:00 +0000</pubDate>
-      
-      <guid>http://patosga.net/tags/markdown/</guid>
-      
-      <description></description>
-      
-    </item>
-    
-    <item>
-      <title>Emoji</title>
-      <link>http://patosga.net/tags/emoji/</link>
-      <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://patosga.net/tags/emoji/</guid>
-      
-      <description></description>
-      
-    </item>
-    
+    <language>en-gb</language><atom:link href="http://patosga.net/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
