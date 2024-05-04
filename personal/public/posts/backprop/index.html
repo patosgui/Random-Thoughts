@@ -3,11 +3,11 @@
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title itemprop="name">Notes on Backpropagation | </title>
-<meta property="og:title" content="Notes on Backpropagation | " />
-<meta name="twitter:title" content="Notes on Backpropagation | " />
-<meta itemprop="name" content="Notes on Backpropagation | " />
-<meta name="application-name" content="Notes on Backpropagation | " />
+<title itemprop="name">Notes on backpropagation | </title>
+<meta property="og:title" content="Notes on backpropagation | " />
+<meta name="twitter:title" content="Notes on backpropagation | " />
+<meta itemprop="name" content="Notes on backpropagation | " />
+<meta name="application-name" content="Notes on backpropagation | " />
 <meta property="og:site_name" content="Patosga&#39;s corner" />
 
 <meta name="description" content="Notes on backpropagation">
@@ -50,14 +50,14 @@
     {
         "@context": "http://schema.org",
         "@type": "Article",
-        "headline": "Notes on Backpropagation",
+        "headline": "Notes on backpropagation",
         "author": {
         "@type": "Person",
         "name": ""
         },
         "datePublished": "2024-05-04",
         "description": "Notes on backpropagation",
-        "wordCount":  470 ,
+        "wordCount":  530 ,
         "mainEntityOfPage": "True",
         "dateModified": "2024-05-04",
         "image": {
@@ -183,7 +183,7 @@ stroke-linejoin="round" class="feather feather-home">
     <main class="page-content" aria-label="Content">
         <article>
             <header class="header">
-                <h1 class="header-title">Notes on Backpropagation</h1>
+                <h1 class="header-title">Notes on backpropagation</h1>
                 
                 
                 <div class="post-meta">
@@ -200,9 +200,11 @@ stroke-linejoin="round" class="feather feather-home">
     <li><a href="#help-links">Help links</a></li>
     <li><a href="#introduction">Introduction</a></li>
     <li><a href="#single-layer-perceptron">Single-Layer Perceptron</a></li>
-    <li><a href="#loss-function">Loss Function</a></li>
-    <li><a href="#backpropagation">Backpropagation</a></li>
-    <li><a href="#code">Code</a></li>
+    <li><a href="#backpropagation">Backpropagation</a>
+      <ul>
+        <li><a href="#output">Output</a></li>
+      </ul>
+    </li>
   </ul>
 </nav>
     </details>
@@ -232,11 +234,8 @@ o_1 = b_1 + z_1 \cdot x^d \\
 o_2 = b_2 + z_2 \cdot x^d \\
 o_3 = b_3 + z_3 \cdot x^d
 $$
-<h2 id="loss-function">Loss Function</h2>
-<p>To be done</p>
 <h2 id="backpropagation">Backpropagation</h2>
-<p>To be done</p>
-<h2 id="code">Code</h2>
+<p>Backpropagation using the MSE as the loss function.</p>
 <pre><code>#!/usr/bin/env python3
 
 import numpy as np
@@ -296,7 +295,24 @@ print_with_name(
     (&quot;Inputs&quot;, inputs),
     (&quot;Outputs&quot;, outputs),
     (&quot;Loss&quot;, loss_function_mse(inputs, outputs))
-)</code></pre>
+)
+</code></pre>
+<h3 id="output">Output</h3>
+<pre><code>### Results before training ###
+Inputs: [[-2.55298982  0.6536186   0.8644362  -0.74216502]]
+Outputs: [[-2.44289966 -1.60088927 -1.76954824 -5.66451789]]
+Loss: 36.26235735300321
+Iteration 0 - MSE: 34.934052775665144
+Iteration 1 - MSE: 33.65440452347993
+Iteration 2 - MSE: 32.42163029589863
+...
+Iteration 998 - MSE: 2.3366931999947335e-15
+Iteration 999 - MSE: 2.2510991954107405e-15
+### Results after training ###
+Inputs: [[-2.55298982  0.6536186   0.8644362  -0.74216502]]
+Outputs: [[-2.55298981  0.65361858  0.86443618 -0.74216506]]
+Loss: 2.2510991954107405e-15
+</code></pre>
             </div>
         </article></main>
 </div>

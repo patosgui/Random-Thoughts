@@ -1,6 +1,6 @@
 +++
 author = "Jose Lopes"
-title = "Notes on Backpropagation"
+title = "Notes on backpropagation"
 date = "2024-05-04"
 description = "Notes on backpropagation"
 series = ["Themes Guide"]
@@ -47,16 +47,11 @@ o_2 = b_2 + z_2 \cdot x^d \\
 o_3 = b_3 + z_3 \cdot x^d
 $$
 
-## Loss Function
-
-To be done
-
 
 ## Backpropagation
 
-To be done
+Backpropagation using the MSE as the loss function.
 
-## Code
     #!/usr/bin/env python3
     
     import numpy as np
@@ -117,3 +112,21 @@ To be done
         ("Outputs", outputs),
         ("Loss", loss_function_mse(inputs, outputs))
     )
+
+
+### Output
+
+    ### Results before training ###
+    Inputs: [[-2.55298982  0.6536186   0.8644362  -0.74216502]]
+    Outputs: [[-2.44289966 -1.60088927 -1.76954824 -5.66451789]]
+    Loss: 36.26235735300321
+    Iteration 0 - MSE: 34.934052775665144
+    Iteration 1 - MSE: 33.65440452347993
+    Iteration 2 - MSE: 32.42163029589863
+    ...
+    Iteration 998 - MSE: 2.3366931999947335e-15
+    Iteration 999 - MSE: 2.2510991954107405e-15
+    ### Results after training ###
+    Inputs: [[-2.55298982  0.6536186   0.8644362  -0.74216502]]
+    Outputs: [[-2.55298981  0.65361858  0.86443618 -0.74216506]]
+    Loss: 2.2510991954107405e-15
