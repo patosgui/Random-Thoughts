@@ -41,10 +41,10 @@ The functions to calculate the output of each neuron are shown below. The $θ_n$
 associated with a neuron $n, that is used to map the input to the output of the neuron.
 
 $$
-o_0 = b_0 + θ_0 \cdot x^d \\
-o_1 = b_1 + θ_1 \cdot x^d \\
-o_2 = b_2 + θ_2 \cdot x^d \\
-o_3 = b_3 + θ_3 \cdot x^d
+o_0 = b_0 + z_0 \cdot x^d \\
+o_1 = b_1 + z_1 \cdot x^d \\
+o_2 = b_2 + z_2 \cdot x^d \\
+o_3 = b_3 + z_3 \cdot x^d
 $$
 
 ## Loss Function
