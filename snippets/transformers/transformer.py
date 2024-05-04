@@ -12,6 +12,12 @@ N = 3
 
 np.random.seed(0)
 
+def print_with_name(*args):
+    for arg in args:
+        print(f"""
+{arg[0]}: {arg[1]}
+""")
+
 # from https://machinelearningmastery.com/a-gentle-introduction-to-positional-encoding-in-transformer-models-part-1/
 def getPositionEncoding(seq_len, d, n=10000):
     P = np.zeros((seq_len, d))
@@ -72,7 +78,6 @@ def self_attention(num, dim, inputs):
     weights_k, bias_k = generate_network(dim)
     weights_v, bias_v = generate_network(dim)
 
-    inputs = np.random.normal(size=(num,dim))
 
     # Calculate attentions
     queries = inputs @ weights_q + bias_q # [3x4]
@@ -91,19 +96,12 @@ def self_attention(num, dim, inputs):
     # can multiply them with the attention weights, where each column maps to a word
     outputs = scaled_weights_a @ values # [4x3] @ [3x3] = [4x3]
 
-    print(
-    f"""
-Queries: 
-{queries}
-Keys: 
-{keys}
-Values:
-{values}
-Attentions:
-{scaled_weights_a}
-Outputs:
-{outputs}
-    """
+    print_with_name(
+        ("Queties", queries),
+        ("Keys", keys),
+        ("Values", values),
+        ("Attentions", scaled_weights_a),
+        ("Outputs", outputs)
     )
 
     return outputs
@@ -120,14 +118,22 @@ embeddings = Embedding(num_embeddings=tokenizer.vocab_size, embedding_dim=D)
 encoding = getPositionEncoding(seq_len=seq_len, d=D)
 
 with torch.no_grad():
-    input = embeddings(torch.tensor(input_token_ids)) + encoding
-#inputs = np.random.normal(size=(N,D))
+    inputs = embeddings(torch.tensor(input_token_ids)) + encoding
 
-print(
-f"""
-Inputs with Position Encoding
-{inputs}
-""")
+D = 8
+
+print("## Input Handling ##")
+print_with_name(
+    ("Input Tokens", input_tokens),
+    ("Input Token IDs", input_token_ids),
+    ("Sequence Length", seq_len),
+    ("Input With Positional Encoding", inputs),
+)
+
+
+
+print("## Transformer ##")
+print("### Multi Head Attention ###")
 
 self_attention_1 = self_attention(num=seq_len, dim=D//2, inputs=inputs)
 self_attention_2 = self_attention(num=seq_len, dim=D//2, inputs=inputs)
@@ -135,46 +141,42 @@ self_attention_2 = self_attention(num=seq_len, dim=D//2, inputs=inputs)
 # TODO: How to concatenate multi heads? Is therea any multiplication required?
 result = np.concatenate((self_attention_1, self_attention_2), axis=1)
 
-print(
-f"""
-Multi Head Result
-{result}
-"""
+print_with_name(
+    ("Self Attention 1", self_attention_1),
+    ("Self Attention 2", self_attention_2),
+    ("Multi Head Result", result),
 )
 
 # TODO: Can we use the defaults values of the parameters?
 result = layer_norm(result, gamma=1, beta=0)
 
-print(
-f"""
-Layer Norm
-{result}
-"""
+print("### Layer Norm ###")
+print_with_name(
+    ("Layer Norm", result),
 )
 
 # Generate as many networks as inputs
 parallel_nns = [generate_network(dim=D) for _ in range(seq_len)]
 
 for input, nn in zip(result, parallel_nns):
-    print("üüü")
     print(input @ nn[0] + nn[1])
 
 # Calculate the output of each parallel network
 result = np.concatenate([[input @ nn[0] + nn[1] for input, nn in zip(result, parallel_nns)]], axis=1)
-print(
-f"""
-Result after parallel networks
-{result}
-"""
+
+
+print("### MLP ###")
+print_with_name(
+    ("Result after parallel networks", result),
 )
 
 result = layer_norm(result, gamma=1, beta=0)
 
-print(
-f"""
-Layer Norm
-{result}
-"""
+print("### Layer Norm ###")
+print_with_name(
+    ("Layer Norm", result),
 )
 
+
+# Backpropagation https://nasheqlbrm.github.io/blog/posts/2021-11-13-backward-pass.html
 # TODO: Residual connection
