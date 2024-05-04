@@ -29,21 +29,23 @@ The full code used in this post can be found [here](#code).
 ## Single-Layer Perceptron
 
 An SLP is a simple neural network that has one layer of neurons and directly connects the input to the ouput.
-It can be defined as a function \(o=f(i,z)\) with parameters that map multivariate inputs \(i\) to multivariate outputs \(o\).
+It can be defined as a function $o=f(i,z)$ with parameters that map multivariate inputs $i$ to multivariate outputs $o$.
 
 Note: The activation function has been omitted from this example for simplicity.
 
-The example at hand assumes that the input \(i\) is a vector of \(d\) dimensions, and the output \(o\) is a vector of \(d\) dimensions.
+The example at hand assumes that the input $i$ is a vector of $d$ dimensions, and the output $o$ is a vector of $d$ dimensions.
 
 ![image](out.gif)
 
-The functions to calculate the output of each neuron are shown below. The \(θ_n\) corresponds to a one-dimensional vector of weights with size \(d\),
-associated with a neuron \(n\), that is used to map the input to the output of the neuron.
+The functions to calculate the output of each neuron are shown below. The $θ_n$ corresponds to a one-dimensional vector of weights with size $d$,
+associated with a neuron $n, that is used to map the input to the output of the neuron.
 
-\[o_0 = b_0 + θ_0 \cdot x^d\]
-\[o_1 = b_1 + θ_1 \cdot x^d\]
-\[o_2 = b_2 + θ_2 \cdot x^d\]
-\[o_3 = b_3 + θ_3 \cdot x^d\]
+$$
+o_0 = b_0 + θ_0 \cdot x^d \\
+o_1 = b_1 + θ_1 \cdot x^d \\
+o_2 = b_2 + θ_2 \cdot x^d \\
+o_3 = b_3 + θ_3 \cdot x^d
+$$
 
 ## Loss Function
 
