@@ -20,8 +20,6 @@
 
   <link rel="alternate" hreflang="de-de" href="http://patosga.net/de-de/posts/math-typesetting/" title="German" />
 
-  <link rel="alternate" hreflang="en-gb" href="http://patosga.net/posts/math-typesetting/" title="English" />
-
   <link rel="alternate" hreflang="ru-ru" href="http://patosga.net/ru-ru/posts/math-typesetting/" title="Russian" />
 
   <link rel="alternate" hreflang="it" href="http://patosga.net/it/posts/math-typesetting/" title="Italian" />
@@ -200,22 +198,6 @@ stroke-linejoin="round" class="feather feather-home">
                                     
                                 
                                     
-                                        
-                                        
-                                            <option id="en-gb" value="http://patosga.net/posts/math-typesetting/">EN-GB</option>
-                                        
-                                    
-                                
-                                    
-                                
-                                    
-                                
-                            
-                                
-                                
-                                    
-                                
-                                    
                                 
                                     
                                         
@@ -319,9 +301,9 @@ math: true
 <ul>
 <li>
 <p>Blocco matematico:</p>
-<p>$$
-\varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
-$$</p>
+$$
+  \varphi = 1+\frac{1} {1+\frac{1} {1+\frac{1} {1+\cdots} } }
+  $$
 </li>
 <li>
 <p>Matematica inline:</p>
@@ -400,3 +382,20 @@ $$</p>
 
 </body>
 </html>
+
+<head>
+  ...
+  
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+<script>
+  MathJax = {
+    tex: {
+      displayMath: [['\\[', '\\]'], ['$$', '$$']],  
+      inlineMath: [['\\(', '\\)']]                  
+    }
+  };
+</script>
+
+  
+  ...
+</head>

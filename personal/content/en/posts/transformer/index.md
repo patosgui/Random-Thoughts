@@ -14,6 +14,7 @@ categories = [
 ]
 series = ["Themes Guide"]
 aliases = ["migrate-from-jekyl"]
+draft = true
 +++
 
 This is the first article in a series of articles about implementing a transformer from scratch.

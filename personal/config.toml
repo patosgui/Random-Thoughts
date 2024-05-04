@@ -41,6 +41,15 @@ ignoreErrors = ["additional-script-loading-error"] # ignore error of loading add
 		startLevel = 2 # ToC starts from H2
 		endLevel = 4 # ToC ends at H4
 		ordered = false # generates <ul> instead of <ol>
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      [markup.goldmark.extensions.passthrough]
+        enable = true
+        [markup.goldmark.extensions.passthrough.delimiters]
+          block = [['\[', '\]'], ['$$', '$$']]
+          inline = [['\(', '\)']]
+[params]
+  math = true
 
 ############################## English language ################################
 [Languages.en-gb]

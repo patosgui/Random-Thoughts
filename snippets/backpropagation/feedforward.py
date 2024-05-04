@@ -209,17 +209,11 @@ class SquareToCircle(Scene):
             layer_idx       = 0,
         )
  
-        hidden_layer = generate_network_layer(
-            num_nodes       = 4,
-            include_bias    = False, 
-            layer_type      = 'output', 
-            layer_idx       = 1,
-        )
- 
         output_layer = generate_network_layer(
             num_nodes       = 4,
             include_bias    = False, 
-            layer_type      = 'output', 
+            layer_type      = 'output',
+            add_layer_label = False,
             layer_idx       = 2,
         )
  
@@ -228,33 +222,23 @@ class SquareToCircle(Scene):
         self.play(input_layer.animate.shift(LEFT * _shift_val))    
         self.wait(0.5)
  
-        self.play(*[Create(item, run_time=_run_time) for item in hidden_layer]) 
-        self.wait(0.5) 
- 
-        output_layer.shift(RIGHT * _shift_val).shift(UP * 0.75) 
         self.play(*[Create(item, run_time=_run_time) for item in output_layer])    
         self.wait(0.5)
  
         #----------------------------
         #-- Create arrows 
-        input_hidden_arrows  = generate_layer_connections(input_layer[0], hidden_layer[0])
-        hidden_output_arrows = generate_layer_connections(hidden_layer[0], output_layer[0])
+        input_output_arrows  = generate_layer_connections(input_layer[0], output_layer[0])
  
-        self.play(*[GrowArrow(arrow) for arrow in input_hidden_arrows])
+        self.play(*[GrowArrow(arrow) for arrow in input_output_arrows])
         self.wait()
  
-        self.play(*[GrowArrow(arrow) for arrow in hidden_output_arrows])
-        self.wait(2)
  
         #------------------------------
         #-- add labels to connections
-        self.play(Uncreate(input_hidden_arrows), Uncreate(hidden_output_arrows))
-        self.wait()
+        #self.play(Uncreate(input_output_arrows))
+        #self.wait()
  
-        labeled_input_hidden_arrows = generate_random_labeled_layer_connections(input_layer[0], hidden_layer[0], font_size=15, add_frame=True,)
-        self.play(*[GrowArrow(arrow) for arrow in labeled_input_hidden_arrows])
-        self.wait(0.4)
+        #labeled_input_hidden_arrows = generate_random_labeled_layer_connections(input_layer[0], output_layer[0], font_size=15, add_frame=True,)
+        #self.play(*[GrowArrow(arrow) for arrow in labeled_input_hidden_arrows])
+        #self.wait()
  
-        labeled_hidden_output_arrows = generate_random_labeled_layer_connections(hidden_layer[0], output_layer[0], font_size=15, add_frame=True,)
-        self.play(*[GrowArrow(arrow) for arrow in labeled_hidden_output_arrows])
-        self.wait()
