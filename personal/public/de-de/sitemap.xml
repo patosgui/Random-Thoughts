@@ -2,100 +2,76 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://patosga.net/de-de/</loc>
-    <lastmod>2024-03-04T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/de-de/pages/about/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-gb"
-                href="http://patosga.net/"
+                href="http://localhost:1313/pages/about/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de-de"
-                href="http://patosga.net/de-de/"
+                href="http://localhost:1313/de-de/pages/about/"
                 />
   </url><url>
-    <loc>http://patosga.net/de-de/posts/table-of-content/</loc>
-    <lastmod>2024-03-04T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://patosga.net/de-de/posts/</loc>
-    <lastmod>2024-03-04T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/de-de/categories/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-gb"
-                href="http://patosga.net/posts/"
+                href="http://localhost:1313/categories/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de-de"
-                href="http://patosga.net/de-de/posts/"
+                href="http://localhost:1313/de-de/categories/"
                 />
   </url><url>
-    <loc>http://patosga.net/de-de/posts/math-typesetting/</loc>
-    <lastmod>2023-04-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://patosga.net/de-de/posts/markdown-syntax/</loc>
-    <lastmod>2023-02-11T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://patosga.net/de-de/posts/rich-content/</loc>
-    <lastmod>2023-02-09T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://patosga.net/de-de/posts/placeholder-text/</loc>
-    <lastmod>2023-02-07T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://patosga.net/de-de/tags/emoji/</loc>
-    <lastmod>2023-02-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://patosga.net/de-de/posts/emoji-support/</loc>
-    <lastmod>2023-02-01T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://patosga.net/de-de/tags/</loc>
-    <lastmod>2023-02-01T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/de-de/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-gb"
-                href="http://patosga.net/tags/"
+                href="http://localhost:1313/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de-de"
-                href="http://patosga.net/de-de/tags/"
+                href="http://localhost:1313/de-de/"
                 />
   </url><url>
-    <loc>http://patosga.net/de-de/pages/about/</loc>
+    <loc>http://localhost:1313/de-de/pages/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-gb"
-                href="http://patosga.net/pages/about/"
+                href="http://localhost:1313/pages/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de-de"
-                href="http://patosga.net/de-de/pages/about/"
+                href="http://localhost:1313/de-de/pages/"
                 />
   </url><url>
-    <loc>http://patosga.net/de-de/categories/</loc>
+    <loc>http://localhost:1313/de-de/posts/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-gb"
-                href="http://patosga.net/categories/"
+                href="http://localhost:1313/posts/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de-de"
-                href="http://patosga.net/de-de/categories/"
+                href="http://localhost:1313/de-de/posts/"
                 />
   </url><url>
-    <loc>http://patosga.net/de-de/pages/</loc>
+    <loc>http://localhost:1313/de-de/tags/</loc>
     <xhtml:link
                 rel="alternate"
                 hreflang="en-gb"
-                href="http://patosga.net/pages/"
+                href="http://localhost:1313/tags/"
                 />
     <xhtml:link
                 rel="alternate"
                 hreflang="de-de"
-                href="http://patosga.net/de-de/pages/"
+                href="http://localhost:1313/de-de/tags/"
                 />
   </url>
 </urlset>

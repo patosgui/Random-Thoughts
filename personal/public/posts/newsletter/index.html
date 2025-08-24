@@ -3,24 +3,22 @@
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title itemprop="name">About | </title>
-<meta property="og:title" content="About | " />
-<meta name="twitter:title" content="About | " />
-<meta itemprop="name" content="About | " />
-<meta name="application-name" content="About | " />
+<title itemprop="name">Personal newsletter | </title>
+<meta property="og:title" content="Personal newsletter | " />
+<meta name="twitter:title" content="Personal newsletter | " />
+<meta itemprop="name" content="Personal newsletter | " />
+<meta name="application-name" content="Personal newsletter | " />
 <meta property="og:site_name" content="Patosga&#39;s corner" />
 
-<meta name="description" content="Hugo, the world&#39;s fastest framework for building websites">
-<meta itemprop="description" content="Hugo, the world&#39;s fastest framework for building websites" />
-<meta property="og:description" content="Hugo, the world&#39;s fastest framework for building websites" />
-<meta name="twitter:description" content="Hugo, the world&#39;s fastest framework for building websites" />
+<meta name="description" content="Notes on backpropagation">
+<meta itemprop="description" content="Notes on backpropagation" />
+<meta property="og:description" content="Notes on backpropagation" />
+<meta name="twitter:description" content="Notes on backpropagation" />
 
 <meta property="og:locale" content="en-gb" />
 <meta name="language" content="en-gb" />
 
-  <link rel="alternate" hreflang="de-de" href="http://localhost:1313/de-de/pages/about/" title="German" />
-
-  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/pages/about/" title="English" />
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/posts/newsletter/" title="English" />
 
 
 
@@ -32,12 +30,53 @@
 
 
 
+    
+    
+    
+
+    <meta property="og:type" content="article" />
+    <meta property="og:article:published_time" content=2024-08-05T00:00:00Z />
+    <meta property="article:published_time" content=2024-08-05T00:00:00Z />
+
+    
+    <meta property="og:article:author" content="Jose lopes" />
+    <meta property="article:author" content="Jose lopes" />
+    <meta name="author" content="Jose lopes" />
+    
+
+    
+
+    <script defer type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "Article",
+        "headline": "Personal newsletter",
+        "author": {
+        "@type": "Person",
+        "name": ""
+        },
+        "datePublished": "2024-08-05",
+        "description": "Notes on backpropagation",
+        "wordCount":  280 ,
+        "mainEntityOfPage": "True",
+        "dateModified": "2024-08-05",
+        "image": {
+        "@type": "imageObject",
+        "url": ""
+        },
+        "publisher": {
+        "@type": "Organization",
+        "name": ""
+        }
+    }
+    </script>
+
 
 <meta name="generator" content="Hugo 0.148.2">
 
     
 
-    <link rel="canonical" href="http://localhost:1313/pages/about/">
+    <link rel="canonical" href="http://localhost:1313/posts/newsletter/">
     <link href="/style.min.d43bc6c79baa87f006efb2b92be952faeedeb1a3ab626c1d6abda52eae049355.css" rel="stylesheet">
     <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
@@ -111,14 +150,14 @@ stroke-linejoin="round" class="feather feather-home">
                 </li>
                 
                 <li>
-                    <a class="menu-link " href="/posts/">
+                    <a class="menu-link active" href="/posts/">
                         Posts
                     </a>
                     
                 </li>
                 
                 <li>
-                    <a class="menu-link active" href="/pages/about/">
+                    <a class="menu-link " href="/pages/about/">
                         About
                     </a>
                     
@@ -128,42 +167,6 @@ stroke-linejoin="round" class="feather feather-home">
                     <span>|</span>
                 </li>
                 
-                
-                    <li>
-                        <select aria-label="Select Language" class="lang-list" id="select-language" onchange="location = this.value;">
-                            
-                            
-                            
-                                
-                                
-                                    
-                                        
-                                        
-                                            <option id="de-de" value="http://localhost:1313/de-de/pages/about/">DE-DE</option>
-                                        
-                                    
-                                
-                                    
-                                
-                            
-                                
-                                
-                                    
-                                
-                                    
-                                        
-                                        
-                                            <option id="en-gb" value="http://localhost:1313/pages/about/" selected>EN-GB
-                                            </option>
-                                        
-                                    
-                                
-                            
-                        </select>                
-                    </li>
-                    <li class="menu-separator">
-                        <span>|</span>
-                    </li>
                 
             </ul>
             <a id="mode" href="#">
@@ -180,30 +183,49 @@ stroke-linejoin="round" class="feather feather-home">
     <main class="page-content" aria-label="Content">
         <article>
             <header class="header">
-                <h1 class="header-title">About</h1>
+                <h1 class="header-title">Personal newsletter</h1>
+                
+                
+                <div class="post-meta">
+                    <time datetime="2024-08-05T00:00:00&#43;00:00" itemprop="datePublished"> 5 Aug 2024 </time>
+                </div>
                 
             </header>
             
     
     <details class="toc" ZgotmplZ>
         <summary><b>Table of Contents</b></summary>
-        <nav id="TableOfContents"></nav>
+        <nav id="TableOfContents">
+  <ul>
+    <li><a href="#introduction">Introduction</a></li>
+    <li><a href="#the-idea">The idea</a></li>
+    <li><a href="#the-result">The result</a></li>
+    <li><a href="#the-code">The code</a></li>
+  </ul>
+</nav>
     </details>
             <div class="page-content">
-                <p>Written in Go, Hugo is an open source static site generator available under the <a href="https://github.com/gohugoio/hugo/blob/master/LICENSE">Apache Licence 2.0.</a> Hugo supports TOML, YAML and JSON data file types, Markdown and HTML content files and uses shortcodes to add rich content. Other notable features are taxonomies, multilingual mode, image processing, custom output formats, HTML/CSS/JS minification and support for Sass SCSS workflows.</p>
-<p>Hugo makes use of a variety of open source projects including:</p>
+                <h2 id="introduction">Introduction</h2>
+<p>This <a href="https://muxup.com/pwr">blog post</a> by Alex Bradbury opened my eyes
+to the ammount of time I spend each day reading the news. There is nothing wrong with it, but the law of diminishing returns applies.
+The more time I spend reading the news, the more likely I am to read the same news over and over again. The pwr tool is great, but it doesn&rsquo;t completly
+solve my problems:</p>
 <ul>
-<li><a href="https://github.com/yuin/goldmark">https://github.com/yuin/goldmark</a></li>
-<li><a href="https://github.com/alecthomas/chroma">https://github.com/alecthomas/chroma</a></li>
-<li><a href="https://github.com/muesli/smartcrop">https://github.com/muesli/smartcrop</a></li>
-<li><a href="https://github.com/spf13/cobra">https://github.com/spf13/cobra</a></li>
-<li><a href="https://github.com/spf13/viper">https://github.com/spf13/viper</a></li>
+<li>More often than not I need to read the news in multiple devices. For example, I would like to use the same tool to read the news at work and at home.</li>
+<li>I would like for the news to only update when I want them too, and not when the news source updates. This is because I might, that way, I&rsquo;m less likely to lose any news.</li>
 </ul>
-<p>Hugo is ideal for blogs, corporate websites, creative portfolios, online magazines, single page applications or even a website with thousands of pages.</p>
-<p>Hugo is for people who want to hand code their own website without worrying about setting up complicated runtimes, dependencies and databases.</p>
-<p>Websites built with Hugo are extremely fast, secure and can be deployed anywhere including, AWS, GitHub Pages, Heroku, Netlify and any other hosting provider.</p>
-<p>Learn more and contribute on <a href="https://github.com/gohugoio">GitHub</a>.</p>
-
+<h2 id="the-idea">The idea</h2>
+<p>My idea was to convert pwr into a web version using streamlit. <a href="https://streamlit.io/">Steamlit</a> is useful to create quick and minimalistic web apps
+in python that can be used to present data in a web browser. Using the browser, it should solve my problem with multiple devices.</p>
+<h2 id="the-result">The result</h2>
+<p>The webpage currently only has one single feature, the &ldquo;Refresh Data&rdquo; buttom.</p>
+<p>When pressed, this button will refresh the data from the news sources
+and cache them until the buttom is pressed again. Refreshing the data while refreshing the webpage would not work because I would only be able to see the data once.</p>
+<p><img src="/posts/newsletter/newsletter.png" alt="image"></p>
+<p>The website is also password protected to ensure minimal data protection.</p>
+<p><img src="/posts/newsletter/newsletter_password.png" alt="image"></p>
+<h2 id="the-code">The code</h2>
+<p>The code can be found in my fork of the pwr tool <a href="https://github.com/patosgui/pwr">here</a>. This code was quickly hacked together and it is by no means production ready.</p>
             </div>
         </article></main>
 </div>

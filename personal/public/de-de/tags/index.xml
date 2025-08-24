@@ -2,21 +2,9 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on </title>
-    <link>http://patosga.net/de-de/tags/</link>
+    <link>http://localhost:1313/de-de/tags/</link>
     <description>Recent content in Tags on </description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>de-de</language>
-    <lastBuildDate>Wed, 01 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="http://patosga.net/de-de/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Emoji</title>
-      <link>http://patosga.net/de-de/tags/emoji/</link>
-      <pubDate>Wed, 01 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>http://patosga.net/de-de/tags/emoji/</guid>
-      
-      <description></description>
-      
-    </item>
-    
+    <language>de-de</language><atom:link href="http://localhost:1313/de-de/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

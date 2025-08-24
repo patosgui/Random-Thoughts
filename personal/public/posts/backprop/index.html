@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<html lang="en-gb"><head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
 <meta http-equiv="content-type" content="text/html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,14 +18,14 @@
 <meta property="og:locale" content="en-gb" />
 <meta name="language" content="en-gb" />
 
-  <link rel="alternate" hreflang="en-gb" href="http://patosga.net/posts/backprop/" title="English" />
+  <link rel="alternate" hreflang="en-gb" href="http://localhost:1313/posts/backprop/" title="English" />
 
 
 
-  <meta itemprop="image" content="http://patosga.net/" />
-  <meta property="og:image" content="http://patosga.net/" />
-  <meta name="twitter:image" content="http://patosga.net/" />
-  <meta name="twitter:image:src" content="http://patosga.net/" />
+  <meta itemprop="image" content="http://localhost:1313/" />
+  <meta property="og:image" content="http://localhost:1313/" />
+  <meta name="twitter:image" content="http://localhost:1313/" />
+  <meta name="twitter:image:src" content="http://localhost:1313/" />
 
 
 
@@ -57,7 +57,7 @@
         },
         "datePublished": "2024-05-04",
         "description": "Notes on backpropagation",
-        "wordCount":  530 ,
+        "wordCount":  529 ,
         "mainEntityOfPage": "True",
         "dateModified": "2024-05-04",
         "image": {
@@ -72,11 +72,11 @@
     </script>
 
 
-<meta name="generator" content="Hugo 0.125.5">
+<meta name="generator" content="Hugo 0.148.2">
 
     
 
-    <link rel="canonical" href="http://patosga.net/posts/backprop/">
+    <link rel="canonical" href="http://localhost:1313/posts/backprop/">
     <link href="/style.min.d43bc6c79baa87f006efb2b92be952faeedeb1a3ab626c1d6abda52eae049355.css" rel="stylesheet">
     <link href="/code-highlight.min.706d31975fec544a864cb7f0d847a73ea55ca1df91bf495fd12a177138d807cf.css" rel="stylesheet">
 
@@ -90,7 +90,7 @@
 
 
 
-<link rel="manifest" href="http://patosga.net/site.webmanifest">
+<link rel="manifest" href="http://localhost:1313/site.webmanifest">
 
 <meta name="msapplication-config" content="/browserconfig.xml">
 <meta name="msapplication-TileColor" content="#2d89ef">
@@ -122,7 +122,7 @@
 
 <div class="navbar" role="navigation">
     <nav class="menu" aria-label="Main Navigation">
-        <a href="http://patosga.net/" class="logo">
+        <a href="http://localhost:1313/" class="logo">
             <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" 
 viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" 
 stroke-linejoin="round" class="feather feather-home">
@@ -225,7 +225,7 @@ The idea is to provide a minimum working example that can be used to understand 
 It can be defined as a function $o=f(i,z)$ with parameters that map multivariate inputs $i$ to multivariate outputs $o$.</p>
 <p>Note: The activation function has been omitted from this example for simplicity.</p>
 <p>The example at hand assumes that the input $i$ is a vector of $d$ dimensions, and the output $o$ is a vector of $d$ dimensions.</p>
-<p><img alt="image" src="/posts/backprop/out.gif"></p>
+<p><img src="/posts/backprop/out.gif" alt="image"></p>
 <p>The functions to calculate the output of each neuron are shown below. The $θ_n$ corresponds to a one-dimensional vector of weights with size $d$,
 associated with a neuron $n, that is used to map the input to the output of the neuron.</p>
 $$
@@ -233,8 +233,7 @@ o_0 = b_0 + z_0 \cdot x^d \\
 o_1 = b_1 + z_1 \cdot x^d \\
 o_2 = b_2 + z_2 \cdot x^d \\
 o_3 = b_3 + z_3 \cdot x^d
-$$
-<h2 id="backpropagation">Backpropagation</h2>
+$$<h2 id="backpropagation">Backpropagation</h2>
 <p>Backpropagation using the MSE as the loss function.</p>
 <pre><code>#!/usr/bin/env python3
 
@@ -350,7 +349,7 @@ Loss: 2.2510991954107405e-15
 </a>
 </div>
     <small class="footer_copyright">
-        © 2024 Lopes Jose.
+        © 2025 Lopes Jose.
         Powered by <a href="https://github.com/hugo-sid/hugo-blog-awesome" target="_blank" rel="noopener">Hugo blog awesome</a>.
     </small>
 </footer><a href="#" title="Go to top" id="totop">
@@ -379,7 +378,7 @@ Loss: 2.2510991954107405e-15
 
 
     
-    <script async src="http://patosga.net/js/main.js" ></script>
+    <script async src="http://localhost:1313/js/main.js" ></script>
 
     
 
